@@ -11,7 +11,9 @@ import streamlit as st
 import requests
 from requests.exceptions import ConnectionError
 
-ip_api = "127.0.0.1"
+# ip_api = "127.0.0.1"
+# ip_api = "0.0.0.0"
+ip_api = "cross-celling-api" # compose
 port_api = "5000"
 
 # Заголовок приложения

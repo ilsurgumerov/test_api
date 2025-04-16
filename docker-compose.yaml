@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  cross-celling-api:
+    build:
+      context: .
+      dockerfile: cross-celling-api/Dockerfile
+    image: cross-celling-api:latest
+    container_name: cross-celling-api
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./cross-celling-api/model_XGB.pkl:/app/model_XGB.pkl
+
+  streamlit-web:
+    build:
+      context: .
+      dockerfile: streamlit-service/Dockerfile
+    image: streamlit-service:latest
+    container_name: streamlit-service
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./streamlit-service/streamlit_app.py:/app/streamlit_app.py

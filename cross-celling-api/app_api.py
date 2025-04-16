@@ -14,7 +14,6 @@ pip install fastapi uvicorn pydantic scikit-learn pandas
 Проверка работы API (/health)
 curl -X GET http://127.0.0.1:5000/health
 curl -X GET http://127.0.0.1:5000/stats
-curl -X POST http://127.0.0.1:5000/predict_model -H "Content-Type: application/json" -d "{\"Pclass\": 3, \"Age\": 22.0, \"Fare\": 7.2500}"
 '''
 
 from fastapi import FastAPI, Request, HTTPException
@@ -74,5 +73,5 @@ def predict_model(input_data: PredictionInput):
 
 if __name__ == '__main__':
     import uvicorn
-    # uvicorn.run(app, host="0.0.0.0", port=5000)
-    uvicorn.run(app, host="127.0.0.1", port=5000)
+    uvicorn.run(app, host="0.0.0.0", port=5000) # docker
+    # uvicorn.run(app, host="127.0.0.1", port=5000) # local host 
