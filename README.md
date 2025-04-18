@@ -78,7 +78,7 @@ streamlit run streamlit_app.py
 
 ### Docker
 
-Также доступен способ запуска через Docker:
+Также доступен способ запуска через Docker (ветка microservices на git):
 
 Установка:
 ```bash
