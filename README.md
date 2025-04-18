@@ -10,8 +10,11 @@
 - [Запуск](#запуск)
   - [FastAPI (Backend)](#fastapi-backend)
   - [Streamlit (Frontend)](#streamlit-frontend)
+  - [Docker](#docker)
 - [Формат запроса](#формат-запроса)
 - [Описание модели](#описание-модели)
+- [Данные](#данные)
+- [Обратная связь](#обратная-связь)
 
 ---
 
@@ -73,6 +76,25 @@ streamlit run streamlit_app.py
 
 ---
 
+### Docker
+
+Также доступен способ запуска через Docker:
+
+Установка:
+```bash
+git clone https://github.com/ваш-username/microservices-example.git
+cd microservices-example
+```
+
+Докер:
+```bash
+docker compose up -d 
+```
+
+После запуска сервисы будут работать в контейнерах. Это удобный способ развёртывания для продакшена или тестирования.
+
+---
+
 ## Формат запроса
 
 Пример JSON для предсказания:
@@ -108,6 +130,12 @@ streamlit run streamlit_app.py
 ### Обучение
 
 Модель обучалась в ноутбуке `train.ipynb`. В нем можно проследить процесс подготовки данных, обучения и сохранения модели.
+
+---
+
+## Данные
+
+Исходный датасет будет доступен по [ссылке](https://example.com/data.csv).
 
 ---
 
