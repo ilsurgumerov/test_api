@@ -8,7 +8,12 @@ git clone https://github.com/ваш-username/microservices-example.git
 cd microservices-example
 ```
 
-Сборка докера:
+Сборка образов:
 ```bash
-docker compose up -d 
+docker compose build
+```
+
+Запуск контейнеров
+``` bash
+docker compose up -d
 ```
